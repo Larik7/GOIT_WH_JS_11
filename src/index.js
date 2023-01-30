@@ -93,7 +93,7 @@ async function performQuery() {
 
     const data = await searchService.getNextData();
 
-    if (!data || (data.length == 0)) {
+    if (!data || (data.length === 0)) {
       Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
       return;
     }
@@ -166,7 +166,7 @@ function refreshPage() {
     refs.finishText.classList.add('is-hidden');
   }
  
-  if ((searchService.page > 1) && !useInfiniteScroll) {   // плавный скролл
+  if ((searchService.page > 1) && !useInfiniteScroll) {
 
     const { height: cardHeight } = refs.gallery.firstElementChild.getBoundingClientRect();
 
